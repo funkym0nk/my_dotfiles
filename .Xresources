@@ -11,10 +11,6 @@
 
 URxvt.font: xft:Terminus:pixelsize=14:style=Regular,xft:Inconsolata\ for\ Powerline:pixelsize=14
 URxvt.boldFont: xft:Terminus:style=Regular:pixelsize=14,xft:Inconsolata\ for\ Powerline:pixelsize=14
-!URxvt*font: xft:Terminus:style=Regular:pixelsize=14
-!URxvt*boldFont: xft:Terminus:style=Regular:pixelsize=14
-! using the old style font loading to avoid the cursor to sometime disappear...
-!URxvt*font: -*-terminus-medium-r-*-*-14-*-*-*-*-*-*-*
 URxvt*letterSpace:
 *saveLines: 65536
 Xft.lcdfilter: ldcdefault
@@ -31,11 +27,6 @@ URxvt*scrollTtyKeypress: true
 URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/xfce-terminal.svg
 URxvt.iso14755: off
 URxvt.iso14755_52: off
-! tabbedex is not provided by default (Debian/Ubuntu)
-! put it in ~/.urxvt/
-!URxvt.perl-lib: .urxvt/
-!URxvt.perl-ext-common: default,matcher,tabbedex
-
 URxvt*termName: xterm-256color
 URxvt.scrollstyle: plain
 
@@ -53,9 +44,13 @@ URxvt*depth: 32
 *charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
 
 ! Launch firefox with the a left click on a URL
-URxvt.url-launcher: /usr/bin/chromium
+URxvt.url-launcher: /usr/bin/google-chrome
 URxvt.matcher.button: 1
 
+! tabbedex is not provided by default (Debian/Ubuntu)
+! put it in ~/.urxvt/
+!URxvt.perl-lib: .urxvt/
+!URxvt.perl-ext-common: default,matcher,tabbedex
 ! tabbedex - appearance of tabs
 !URxvt.tabbed.no-tabbedex-keys: yes
 !URXvt.tabbed.reopen-on-close: yes
@@ -132,14 +127,12 @@ URxvt.keysym.M-C-End          : \033[1;7F
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
-
 *background:            S_base03
 *foreground:            S_base0
 *fadeColor:             S_base03
 *cursorColor:           S_base1
 *pointerColorBackground:S_base01
 *pointerColorForeground:S_base1
-
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
 #define S_red           #dc322f
@@ -148,36 +141,27 @@ URxvt.keysym.M-C-End          : \033[1;7F
 #define S_blue          #268bd2
 #define S_cyan          #2aa198
 #define S_green         #859900
-
 ! black dark/light
 *color0:                S_base02
 *color8:                S_base03
-
 !! red dark/light
 *color1:                S_red
 *color9:                S_orange
-
 !! green dark/light
 *color2:                S_green
 *color10:               S_base01
-
 !! yellow dark/light
 *color3:                S_yellow
 *color11:               S_base00
-
 !! blue dark/light
 *color4:                S_blue
 *color12:               S_base0
-
 !! magenta dark/light
 *color5:                S_magenta
 *color13:               S_violet
-
 !! cyan dark/light
 *color6:                S_cyan
 *color14:               S_base1
-
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
-
