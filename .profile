@@ -20,6 +20,3 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-
-TERM=xterm-256color
-eval `dircolors .dir_colors/dircolors.ansi-dark`

@@ -51,7 +51,7 @@ fi
 
 color_prompt=yes
 if [ "$color_prompt" = yes ]; then
-    PS1='[${debian_chroot:+($debian_chroot)}\[\033[0;94m\]\u@\h\[\033[00m\] \[\033[0;37m\]\w\[\033[00m\]] '
+    PS1='[${debian_chroot:+($debian_chroot)}\[\033[0;94m\]\u@\h\[\033[00m\]$(__git_ps1) \[\033[0;37m\]\w\[\033[00m\]] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -105,3 +105,5 @@ fi
 complete -f file make
 
 export PATH=$PATH:/sbin:/usr/sbin
+export TERM=xterm-256color
+eval `dircolors .dir_colors/dircolors.ansi-dark`
