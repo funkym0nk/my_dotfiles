@@ -1,5 +1,4 @@
-call pathogen#infect()
-let g:Powerline_symbols = 'fancy'
+execute pathogen#infect()
 colorscheme solarized
 set background=dark
 
@@ -72,7 +71,7 @@ set tm=500
 "set number
 
 " Enable mouse
-set mouse=v
+set mouse=a
 
 "set list " we do what to show tabs, to ensure we get them out of my files
 "set listchars=trail:. " show tabs and trailing 
@@ -146,3 +145,6 @@ hi CursorLineNR cterm=bold
 augroup CLNRSet
     autocmd! ColorScheme * hi CursorLineNR cterm=bold
 augroup END
+
+set tags=tags;/
+
