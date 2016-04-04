@@ -121,4 +121,4 @@ complete -f file make
 
 export PATH=$PATH:/sbin:/usr/sbin
 export TERM=xterm-256color
-eval `dircolors ~/.dir_colors/dircolors-solarized/dircolors.ansi-dark`
+eval `dircolors ~/.dir_colors/dircolors.ansi-dark`
