@@ -28,3 +28,6 @@
 [submodule ".vim/taglist.vim"]
 	path = .vim/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule ".dir_colors"]
+	path = .dir_colors
+	url = https://github.com/seebi/dircolors-solarized.git
