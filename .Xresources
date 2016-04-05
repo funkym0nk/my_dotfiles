@@ -24,11 +24,12 @@ URxvt*scrollBar: false
 URxvt*scrollTtyOutput: false
 URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
-URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/xfce-terminal.svg
+URxvt*skipScroll:  true
 URxvt.iso14755: off
 URxvt.iso14755_52: off
-URxvt*termName: xterm-256color
+URxvt*termName: screen-256color
 URxvt.scrollstyle: plain
+URxvt*fading:  30
 
 URxvt*depth: 32
 *utf8: 2
@@ -43,13 +44,14 @@ URxvt*depth: 32
 *colorUL: tomato
 *charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
 
-! Launch firefox with the a left click on a URL
-URxvt.url-launcher: /usr/bin/google-chrome
+!URxvt.perl-lib: .urxvt/
+URxvt.perl-ext-common: default,matcher
+
+! Launch default browser with the a left click on a URL
+URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 
-! tabbedex is not provided by default (Debian/Ubuntu)
-! put it in ~/.urxvt/
-!URxvt.perl-lib: .urxvt/
+! tabbedex is not provided by default (Debian/Ubuntu) put it in ~/.urxvt/
 !URxvt.perl-ext-common: default,matcher,tabbedex
 ! tabbedex - appearance of tabs
 !URxvt.tabbed.no-tabbedex-keys: yes
@@ -64,6 +66,14 @@ URxvt.matcher.button: 1
 !URxvt.tabbed.title: true
 !URxvt.tabbed.title-bg: 0
 !URxvt.tabbed.title-fg: 2
+! Bindings
+!URxvt.keysym.C-T: perl:tabbedex:new_tab
+!URxvt.keysym.C-R: perl:tabbedex:rename_tab
+!URxvt.keysym.C-Page_Up: perl:tabbedex:prev_tab
+!URxvt.keysym.C-Page_Down: perl:tabbedex:next_tab
+!URxvt.keysym.C-S-Page_Up: perl:tabbedex:move_tab_left
+!URxvt.keysym.C-S-Page_Down: perl:tabbedex:move_tab_right
+
 
 !------------------------
 ! Shortcuts
@@ -111,13 +121,6 @@ URxvt.keysym.M-C-Page_Up      : \033[5;7~
 URxvt.keysym.M-C-Page_Down    : \033[6;7~
 URxvt.keysym.M-C-Home         : \033[1;7H
 URxvt.keysym.M-C-End          : \033[1;7F
-! Tabbedex
-!URxvt.keysym.C-T: perl:tabbedex:new_tab
-!URxvt.keysym.C-R: perl:tabbedex:rename_tab
-!URxvt.keysym.C-Page_Up: perl:tabbedex:prev_tab
-!URxvt.keysym.C-Page_Down: perl:tabbedex:next_tab
-!URxvt.keysym.C-S-Page_Up: perl:tabbedex:move_tab_left
-!URxvt.keysym.C-S-Page_Down: perl:tabbedex:move_tab_right
 
 #define S_base03        #002b36
 #define S_base02        #073642

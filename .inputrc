@@ -41,13 +41,9 @@ $if mode=emacs
 "\e[5~": history-search-backward
 "\e[6~": history-search-forward
 
-# mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
-"\e[5C": forward-word
-"\e[5D": backward-word
-"\e\e[C": forward-word
-"\e\e[D": backward-word
+# mappings for Shift-left-arrow and Shift-right-arrow for word moving
+"\e[1;2C": forward-word
+"\e[1;2D": backward-word
 
 $if term=rxvt
 "\e[7~": beginning-of-line
