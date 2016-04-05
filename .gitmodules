@@ -25,9 +25,6 @@
 [submodule ".vim/taglist.vim"]
 	path = .vim/taglist.vim
 	url = https://github.com/vim-scripts/taglist.vim.git
-[submodule ".dir_colors"]
-	path = .dir_colors
-	url = https://github.com/seebi/dircolors-solarized.git
 [submodule ".vim/pathogen.vim"]
 	path = .vim/pathogen.vim
 	url = https://github.com/vim-scripts/pathogen.vim.git
@@ -37,3 +34,6 @@
 [submodule ".vim/bundle/vim-tmux-focus-events"]
 	path = .vim/bundle/vim-tmux-focus-events
 	url = git://github.com/tmux-plugins/vim-tmux-focus-events.git
+[submodule ".dircolors"]
+	path = .dircolors
+	url = https://github.com/seebi/dircolors-solarized.git
