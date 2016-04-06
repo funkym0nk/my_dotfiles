@@ -37,3 +37,6 @@
 [submodule ".dircolors"]
 	path = .dircolors
 	url = https://github.com/seebi/dircolors-solarized.git
+[submodule ".vim/bundle/vim-dirdiff"]
+	path = .vim/bundle/vim-dirdiff
+	url = git://github.com/will133/vim-dirdiff
