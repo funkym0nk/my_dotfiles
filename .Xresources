@@ -32,8 +32,8 @@ URxvt*termName: rxvt-256color
 URxvt.scrollstyle: plain
 !URxvt*fading:  30
 !URxvt.borderless: true
+!URxvt*internalBorder: 0
 URxvt*intensityStyles: false
-URxvt*internalBorder: 0
 URxvt.inputMethod: fcitx
 URxvt.preeditType: OverTheSpot
 
