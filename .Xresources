@@ -16,8 +16,9 @@ URxvt*letterSpace:
 Xft.lcdfilter: ldcdefault
 Xft.dpi: 100
 Xft.antialias: true
-Xft.rgba: rgb
+Xft.rgba: true
 Xft.hinting: true
+Xft.hintstyle:  hintslight
 
 URxvt*lineSpace: 0
 URxvt*scrollBar: false
@@ -27,9 +28,14 @@ URxvt*scrollTtyKeypress: true
 URxvt*skipScroll:  true
 URxvt.iso14755: off
 URxvt.iso14755_52: off
-URxvt*termName: screen-256color
+URxvt*termName: rxvt-256color
 URxvt.scrollstyle: plain
-URxvt*fading:  30
+!URxvt*fading:  30
+!URxvt.borderless: true
+URxvt*intensityStyles: false
+URxvt*internalBorder: 0
+URxvt.inputMethod: fcitx
+URxvt.preeditType: OverTheSpot
 
 URxvt*depth: 32
 *utf8: 2
@@ -44,13 +50,12 @@ URxvt*depth: 32
 *colorUL: tomato
 *charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
 
-!URxvt.perl-lib: .urxvt/
+URxvt.perl-lib: .urxvt/
 URxvt.perl-ext-common: default,matcher
 
 ! Launch default browser with the a left click on a URL
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
-
 ! tabbedex is not provided by default (Debian/Ubuntu) put it in ~/.urxvt/
 !URxvt.perl-ext-common: default,matcher,tabbedex
 ! tabbedex - appearance of tabs
@@ -168,3 +173,4 @@ URxvt.keysym.M-C-End          : \033[1;7F
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
+
