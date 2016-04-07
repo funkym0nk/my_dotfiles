@@ -119,6 +119,6 @@ fi
 # make autocompletion
 complete -f file make
 
-export PATH=$PATH:/sbin:/usr/sbin
-export TERM=xterm-256color
+export PATH=$PATH:/sbin:/usr/sbin:~/.dotfiles/bin
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
+

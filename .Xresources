@@ -28,7 +28,7 @@ URxvt*scrollTtyKeypress: true
 URxvt*skipScroll:  true
 URxvt.iso14755: off
 URxvt.iso14755_52: off
-URxvt*termName: rxvt-256color
+URxvt*termName: rxvt-unicode
 URxvt.scrollstyle: plain
 !URxvt*fading:  30
 !URxvt.borderless: true
