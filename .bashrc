@@ -122,3 +122,5 @@ complete -f file make
 export PATH=$PATH:/sbin:/usr/sbin:~/.dotfiles/bin
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
 
+source ~/.bash_git
+source ~/.git-completion.bash
