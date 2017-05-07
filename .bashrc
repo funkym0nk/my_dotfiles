@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='[${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\h\[\033[00m\]$(__git_ps1) \[\033[0;37m\]\w\[\033[00m\]] '
+    PS1='[${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\h\[\033[00m\]:\033[0;37m\]\w\[\033[00m\]]$(__git_ps1) '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -79,6 +79,7 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
+    alias vi='vim'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
