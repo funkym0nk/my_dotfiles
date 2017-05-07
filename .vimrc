@@ -71,7 +71,7 @@ set tm=500
 "set number
 
 " Enable mouse
-set mouse=a
+"set mouse=a
 
 "set list " we do what to show tabs, to ensure we get them out of my files
 "set listchars=trail:. " show tabs and trailing 
@@ -128,17 +128,17 @@ set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/afte
 :command Q q
 
 set wmh=0
-nnoremap <silent> <A-Up> <c-w>k<C-W>_
-nnoremap <silent> <A-Down> <c-w>j<C-W>_
-nnoremap <silent> <A-Right> <c-w>l<C-W>_
-nnoremap <silent> <A-Left> <c-w>h<C-W>_
-nnoremap <silent> <A-PageUp> :tabprevious<CR>
-nnoremap <silent> <A-PageDown> :tabnext<CR>
-nnoremap <silent> <C-t> :tabnew<CR>:e.<CR>
-nnoremap <silent> <C-k> :split<CR>:e.<CR>
-nnoremap <silent> <C-l> :vsplit<CR>:e.<CR>
-nnoremap <silent> <A-S-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <A-S-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+nnoremap <silent> <M-Up> <c-w>k<C-W>_
+nnoremap <silent> <M-Down> <c-w>j<C-W>_
+nnoremap <silent> <M-Right> <c-w>l<C-W>_
+nnoremap <silent> <M-Left> <c-w>h<C-W>_
+nnoremap <silent> <M-PageUp> :tabprevious<CR>
+nnoremap <silent> <M-PageDown> :tabnext<CR>
+nnoremap <silent> <M-t> :tabnew<CR>:e.<CR>
+nnoremap <silent> <M-k> :split<CR>:e.<CR>
+nnoremap <silent> <M-j> :vsplit<CR>:e.<CR>
+nnoremap <silent> <M-S-PageUp> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <M-S-PageDown> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 set cursorline
 hi CursorLineNR cterm=bold
