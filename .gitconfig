@@ -1,0 +1,15 @@
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status -uno
+	last = log -1 HEAD
+[core]
+	editor = vim
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true

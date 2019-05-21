@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='[${debian_chroot:+($debian_chroot)}\[\033[00m\]\u@\h\[\033[00m\]:\033[0;37m\]\w\[\033[00m\]]$(__git_ps1) '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;34m\]\u@\h\[\033[00m\]:\[\033[0;37m\]\w\[\033[00m\]$(__git_ps1 ":%s")\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -120,8 +120,8 @@ fi
 # make autocompletion
 complete -f file make
 
-export PATH=$PATH:/sbin:/usr/sbin:~/.dotfiles/bin
+source ~/.git-prompt.sh
+source ~/.git-completion.bash
+
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
 
-source ~/.bash_git
-source ~/.git-completion.bash
