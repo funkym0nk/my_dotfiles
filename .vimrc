@@ -68,10 +68,10 @@ set t_vb=
 set tm=500
 
 " Line number
-"set number
+set number
 
 " Enable mouse
-"set mouse=a
+set mouse=a
 
 "set list " we do what to show tabs, to ensure we get them out of my files
 "set listchars=trail:. " show tabs and trailing 
