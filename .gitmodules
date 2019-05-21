@@ -40,3 +40,7 @@
 [submodule ".vim/bundle/vim-dirdiff"]
 	path = .vim/bundle/vim-dirdiff
 	url = git://github.com/will133/vim-dirdiff
+[submodule ".tmux/plugins/tmux-logging"]
+	path = .tmux/plugins/tmux-logging
+	url = https://github.com/tmux-plugins/tmux-logging.git
+	branch = master
