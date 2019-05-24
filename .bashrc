@@ -93,8 +93,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-alias fzf='fzf-tmux'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -127,5 +125,13 @@ source ~/.git-completion.bash
 
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
 
+alias fzf='fzf-tmux'
+export FZF_COMPLETION_TRIGGER='~~'
+export FZF_TMUX='1'
+export FZF_TMUX_HEIGHT='30%'
+complete -F _fzf_dir_completion -o default -o bashdefault tree
+complete -F _fzf_dir_completion -o default -o bashdefault apt
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f ~/.Xresources ] && xrdb merge ~/.Xresources
+

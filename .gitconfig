@@ -8,9 +8,9 @@
 	last = log -1 HEAD
 [core]
 	editor = vim
-	pager = less --tabs=4 -+F -+X -M
+	pager = less --tabs=4 -FRXM
 [color]
-	#diff = auto
+	diff = auto
 	status = auto
 	branch = auto
 	interactive = auto
