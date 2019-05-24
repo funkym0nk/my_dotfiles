@@ -120,9 +120,6 @@ fi
 # make autocompletion
 complete -f file make
 
-source ~/.git-prompt.sh
-source ~/.git-completion.bash
-
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
 
 alias fzf='fzf-tmux'
@@ -131,7 +128,10 @@ export FZF_TMUX='1'
 export FZF_TMUX_HEIGHT='30%'
 complete -F _fzf_dir_completion -o default -o bashdefault tree
 complete -F _fzf_dir_completion -o default -o bashdefault apt
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 [ -f ~/.Xresources ] && xrdb merge ~/.Xresources
+
+source /etc/bash_completion.d/git-prompt
+source /usr/share/bash-completion/completions/git
 
