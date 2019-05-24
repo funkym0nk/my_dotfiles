@@ -148,3 +148,6 @@ augroup END
 
 set tags=tags;/
 
+" If installed using git
+set rtp+=~/.fzf
+

@@ -44,3 +44,6 @@
 	path = .tmux/plugins/tmux-logging
 	url = https://github.com/tmux-plugins/tmux-logging.git
 	branch = master
+[submodule ".fzf"]
+	path = .fzf
+	url = ./.fzf

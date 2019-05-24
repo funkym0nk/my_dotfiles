@@ -1,15 +1,30 @@
 [alias]
+	uppa = "!{ [ -d \"$(git rev-parse --show-toplevel)/.git\" ] && if command -v git-up >/dev/null; then git up; else git remote update && git pull --rebase; fi } && git submodule update"
 	co = checkout
 	br = branch
 	ci = commit
+	ca = commit -a
 	st = status -uno
 	last = log -1 HEAD
 [core]
 	editor = vim
+	pager = less --tabs=4 -+F -+X -M
 [color]
-	diff = auto
+	#diff = auto
 	status = auto
 	branch = auto
 	interactive = auto
 	ui = true
 	pager = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
