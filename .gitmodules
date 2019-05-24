@@ -37,3 +37,12 @@
 [submodule ".fzf"]
 	path = .fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule ".tmux/plugins/tmux-better-mouse-mode"]
+	path = .tmux/plugins/tmux-better-mouse-mode
+	url = https://github.com/NHDaly/tmux-better-mouse-mode.git
+[submodule ".tmux/plugins/extrakto"]
+	path = .tmux/plugins/extrakto
+	url = https://github.com/laktak/extrakto.git
+[submodule ".tmux/plugins/tmux-online-status"]
+	path = .tmux/plugins/tmux-online-status
+	url = https://github.com/tmux-plugins/tmux-online-status.git
