@@ -4,12 +4,6 @@
 [submodule ".tmux/plugins/tmux-resurrect"]
 	path = .tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect.git
-[submodule ".tmux/plugins/tmux-sensible"]
-	path = .tmux/plugins/tmux-sensible
-	url = https://github.com/tmux-plugins/tmux-sensible.git
-[submodule ".tmux/plugins/tmux-yank"]
-	path = .tmux/plugins/tmux-yank
-	url = https://github.com/tmux-plugins/tmux-yank.git
 [submodule ".tmux/plugins/tpm"]
 	path = .tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
@@ -40,10 +34,6 @@
 [submodule ".vim/bundle/vim-dirdiff"]
 	path = .vim/bundle/vim-dirdiff
 	url = git://github.com/will133/vim-dirdiff
-[submodule ".tmux/plugins/tmux-logging"]
-	path = .tmux/plugins/tmux-logging
-	url = https://github.com/tmux-plugins/tmux-logging.git
-	branch = master
 [submodule ".fzf"]
 	path = .fzf
-	url = ./.fzf
+	url = https://github.com/junegunn/fzf.git
