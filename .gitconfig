@@ -8,9 +8,9 @@
 	last = log -1 HEAD
 [core]
 	editor = vim
-	pager = less --tabs=4 -+X -FRM +Gg
+	pager = less --tabs=4 -+X -FSRM +Gg
 [pager]
-	log = less --tabs=4 -+X -FRM
+	log = less --tabs=4 -+X -FSRM
 [color]
 	diff = auto
 	status = auto
