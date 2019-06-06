@@ -79,7 +79,6 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias vi='vim'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -92,10 +91,6 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -117,19 +112,22 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# make autocompletion
+#####################################################################
+export EDITOR='vim --remote-tab-silent'
+alias alert='notify-send --urgency=high -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias tmux_source="$(which tmux) source-file ~/.tmux.conf"
+alias tmux="$(which tmux) attach -t default || tmux new -s default"
+alias vim_server="$(which vim) --servername VIM ."
+alias vim="$(which vim) --remote-tab-silent"
+alias vi="$(which vim)"
 complete -f file make
-
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
-
 alias fzf='fzf-tmux'
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_TMUX='1'
 export FZF_TMUX_HEIGHT='30%'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 [ -f ~/.Xresources ] && xrdb merge ~/.Xresources
-
 source /etc/bash_completion.d/git-prompt
 source /usr/share/bash-completion/completions/git
 

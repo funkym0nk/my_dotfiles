@@ -44,3 +44,6 @@
 [submodule ".tmux/plugins/tmux-online-status"]
 	path = .tmux/plugins/tmux-online-status
 	url = https://github.com/tmux-plugins/tmux-online-status.git
+[submodule ".vim/bundle/vim-editexisting"]
+	path = .vim/bundle/vim-editexisting
+	url = https://github.com/svintus/vim-editexisting.git

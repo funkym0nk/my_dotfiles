@@ -1,0 +1,24 @@
+search pac
+shel
+search package/
+open_with 1
+searchyaps-cm
+search package/yaps-cm
+search yaps-cm
+copy c
+search q
+search dev
+search 
+search
+search files
+search etc
+fzf_select 
+open_with 3
+e
+edf
+ef
+rename gmp
+:q
+
+shell tmux select-pane -R %s
+q

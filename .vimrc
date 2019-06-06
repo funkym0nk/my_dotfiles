@@ -121,6 +121,16 @@ syn keyword cOperator likely unlikely
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+set cursorline
+hi CursorLineNR cterm=bold
+augroup CLNRSet
+    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+augroup END
+
+set tags=tags;/
+set rtp+=~/.fzf
+
+let g:ranger_executable = 'ranger'
 
 :command WQ wq
 :command Wq wq
@@ -139,14 +149,4 @@ nnoremap <silent> <M-k> :split<CR>:e.<CR>
 nnoremap <silent> <M-j> :vsplit<CR>:e.<CR>
 nnoremap <silent> <M-S-PageUp> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <M-S-PageDown> :execute 'silent! tabmove ' . tabpagenr()<CR>
-
-set cursorline
-hi CursorLineNR cterm=bold
-augroup CLNRSet
-    autocmd! ColorScheme * hi CursorLineNR cterm=bold
-augroup END
-
-set tags=tags;/
-
-set rtp+=~/.fzf
 
