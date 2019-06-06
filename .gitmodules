@@ -50,3 +50,6 @@
 [submodule ".config/Franz/recipes/tinder"]
 	path = .config/Franz/recipes/dev/tinder
 	url = https://github.com/mszczepanczyk/franz-recipe-tinder.git
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
