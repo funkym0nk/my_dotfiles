@@ -48,5 +48,5 @@
 	path = .vim/bundle/vim-editexisting
 	url = https://github.com/svintus/vim-editexisting.git
 [submodule ".config/Franz/recipes/tinder"]
-	path = .config/Franz/recipes/tinder
+	path = .config/Franz/recipes/dev/tinder
 	url = https://github.com/mszczepanczyk/franz-recipe-tinder.git
