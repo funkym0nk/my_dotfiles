@@ -8,9 +8,9 @@
 	last = log -1 HEAD
 [core]
 	editor = vim
-	pager = less --tabs=4 -+X -FSRM +Gg
+	#pager = less --tabs=4 -+X -FSRM
 [pager]
-	log = less --tabs=4 -+X -FSRM
+	#log = less --tabs=4 -+X -FSRM
 [color]
 	diff = auto
 	status = auto
@@ -31,3 +31,11 @@
 	new = green bold
 	whitespace = red reverse
 
+[user]
+	mail = m.farina@adbglobal.com
+	name = Matteo Farina
+	email = m.farina@adbglobal.com
+[diff]
+	tool = meld
+[http "https://chipmaster2.qti.qualcomm.com"]
+	followRedirects = true

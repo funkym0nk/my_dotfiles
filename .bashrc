@@ -78,7 +78,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
+    alias diff='diff --color=auto'
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -113,21 +113,28 @@ if ! shopt -oq posix; then
 fi
 
 #####################################################################
+
 export EDITOR='vim --remote-tab-silent'
-alias alert='notify-send --urgency=high -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-alias tmux_source="$(which tmux) source-file ~/.tmux.conf"
-alias tmux="$(which tmux) attach -t default || tmux new -s default"
 alias vim_server="$(which vim) --servername VIM ."
-alias vim="$(which vim) --remote-tab-silent"
-alias vi="$(which vim)"
+alias vim_send="$(which vim) --remote-tab-silent"
+
 complete -f file make
+function my_make() { make "$@"; notify-send -u "critical" -i "$([ $? = 0 ] && echo terminal || echo error)" "make" "compilation finished"; }
+alias make='my_make'
+alias quantum='sshfs M.Farina@192.168.100.88:dev /home/matteo/dev/quantum'
+alias quelo='sshfs M.Farina@192.168.100.52:dev /home/matteo/dev/quelo'
 eval `dircolors ~/.dircolors/dircolors.ansi-dark`
+
 alias fzf='fzf-tmux'
 export FZF_COMPLETION_TRIGGER='``'
 export FZF_TMUX='1'
 export FZF_TMUX_HEIGHT='30%'
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 [ -f ~/.Xresources ] && xrdb merge ~/.Xresources
+
 source /etc/bash_completion.d/git-prompt
 source /usr/share/bash-completion/completions/git
 
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
